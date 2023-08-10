@@ -25,7 +25,7 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>3.5</OldToolsVersion>
     <TargetFrameworkProfile />
-    <PublishUrl>C:\Users\Zulhisham\Desktop\epson\ActiveProc - PC %28Keyence%29\ClickOnce\</PublishUrl>
+    <PublishUrl>C:\Users\User\source\repos\epson\ActiveProc - PC %28Keyence%29\ClickOnce\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -35,21 +35,21 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://172.16.59.254/dnld/az_Logics/ActiveProc_kv/</InstallUrl>
-    <UpdateUrl>http://172.16.59.254/dnld/az_Logics/ActiveProc_kv/</UpdateUrl>
+    <InstallUrl>http://20.10.30.2/dnld/az_Logics/ActiveProc_kv/</InstallUrl>
+    <UpdateUrl>http://20.10.30.2/dnld/az_Logics/ActiveProc_kv/</UpdateUrl>
     <ProductName>ActiveProc</ProductName>
     <PublisherName>az_Logics</PublisherName>
-    <MinimumRequiredVersion>2016.07.30.4</MinimumRequiredVersion>
+    <MinimumRequiredVersion>2023.08.10.7</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>ActiveProc.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>5</ApplicationRevision>
-    <ApplicationVersion>2016.07.30.%2a</ApplicationVersion>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>2023.08.10.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <BootstrapperComponentsLocation>Absolute</BootstrapperComponentsLocation>
-    <BootstrapperComponentsUrl>http://172.16.59.254/dnld/az_Logics/ActiveProc_kv/</BootstrapperComponentsUrl>
+    <BootstrapperComponentsUrl>http://20.10.30.2/dnld/az_Logics/ActiveProc_kv/</BootstrapperComponentsUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -331,10 +331,10 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://172.16.59.254/az_services/lmservices.asmx">
+    <WebReferenceUrl Include="http://20.10.30.2/az_services/lmservices.asmx">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\zulhisham-pc\</RelPath>
-      <UpdateFromURL>http://172.16.59.254/az_services/lmservices.asmx</UpdateFromURL>
+      <UpdateFromURL>http://20.10.30.2/az_services/lmservices.asmx</UpdateFromURL>
       <ServiceLocationURL>
       </ServiceLocationURL>
       <CachedDynamicPropName>

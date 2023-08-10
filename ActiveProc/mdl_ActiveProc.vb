@@ -19,7 +19,7 @@ Module mdl_ActiveProc
 
 
     Public Const MachineDataServer As String = "172.16.59.2"        'epm2mn1
-    Public Const MachineSystemServer As String = "172.16.59.254"    'etmymnet
+    Public Const MachineSystemServer As String = "20.10.30.2"    'etmymnet
 
     Public Const Func_Ret_Success = 0
     Public Const Func_Ret_Fail = -1
@@ -368,10 +368,15 @@ Module mdl_ActiveProc
 
 #If UseSQL_Server = 1 Then
                 With .DataBase_
-                    .Server = regSubKey.GetValue("Database_server", "172.16.59.254\SQLEXPRESS")
+                    .Server = regSubKey.GetValue("Database_server", "20.10.30.2\SQLEXPRESS")
                     .Name = regSubKey.GetValue("Database_name", "Marking")
                     .uid = regSubKey.GetValue("Database_uid", "VB-SQL")
                     .pwd = regSubKey.GetValue("Database_pwd", "Anyn0m0us")
+
+                    '.Server = regSubKey.GetValue("Database_server", "DESKTOP-TLVFD7V\SQLEXPRESS")
+                    '.Name = regSubKey.GetValue("Database_name", "Marking")
+                    '.uid = regSubKey.GetValue("Database_uid", "sa")
+                    '.pwd = regSubKey.GetValue("Database_pwd", "Az@HoePinc0615")
                 End With
 #Else
                 With .DataBase_
@@ -779,11 +784,11 @@ Module mdl_ActiveProc
     Private Function GetProfilesFromServer(ByRef SettingCondition() As ParameterProfile) As Integer
 
         Dim RetVal As Integer = 0
-        Dim sConnStr As String = _
-                    "SERVER=" & ActiveProc.DataBase_.Server & "; " & _
-                    "DataBase=" & ActiveProc.DataBase_.Name & "; " & _
-                    "uid=VB-SQL;" & _
-                    "pwd=Anyn0m0us"
+        Dim sConnStr As String =
+                    "SERVER=" & ActiveProc.DataBase_.Server & "; " &
+                    "DataBase=" & ActiveProc.DataBase_.Name & "; " &
+                    "uid=" & ActiveProc.DataBase_.uid & ";" &
+                    "pwd=" & ActiveProc.DataBase_.pwd
         '"Integrated Security=SSPI"
 
         Dim dbConnection As New SqlConnection(sConnStr)
@@ -885,11 +890,11 @@ Module mdl_ActiveProc
     Private Function Check_dboTables(ByVal TableName As String, ByVal CreateTblStr As String) As Integer
 
         Dim RetVal As Integer = 0
-        Dim sConnStr As String = _
-                    "SERVER=" & ActiveProc.DataBase_.Server & "; " & _
-                    "DataBase=" & "; " & _
-                    "uid=VB-SQL;" & _
-                    "pwd=Anyn0m0us"
+        Dim sConnStr As String =
+                    "SERVER=" & ActiveProc.DataBase_.Server & "; " &
+                    "DataBase=" & "; " &
+                    "uid=" & ActiveProc.DataBase_.uid & ";" &
+                    "pwd=" & ActiveProc.DataBase_.pwd
         '"Integrated Security=SSPI"
 
         Dim dbConnection As New SqlConnection(sConnStr)

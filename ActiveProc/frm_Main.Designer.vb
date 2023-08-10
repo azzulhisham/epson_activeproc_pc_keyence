@@ -3150,7 +3150,7 @@ Partial Class frm_Main
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.Size = New System.Drawing.Size(756, 472)
         Me.WebBrowser1.TabIndex = 0
-        Me.WebBrowser1.Url = New System.Uri("http://172.16.59.254/azactivelm/", System.UriKind.Absolute)
+        Me.WebBrowser1.Url = New System.Uri("http://20.10.30.2/azactivelm/", System.UriKind.Absolute)
         '
         'Label1
         '
